@@ -6,6 +6,7 @@ import java.util.Optional;
 import com.dvhlspringboot.testspringboot.Model.Product;
 import com.dvhlspringboot.testspringboot.Model.ResponseObject;
 import com.dvhlspringboot.testspringboot.Model.Search;
+import com.dvhlspringboot.testspringboot.Repositories.CategoryRepository;
 import com.dvhlspringboot.testspringboot.Repositories.ProductRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProductController {
     @Autowired
     private ProductRepository productRepository;
+    // @Autowired
+    // private CategoryRepository categoryRepository;
     @GetMapping("")
     List<Product> getAllProducts(){
         return productRepository.findAll();
